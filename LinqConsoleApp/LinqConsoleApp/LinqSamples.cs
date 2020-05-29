@@ -230,7 +230,8 @@ namespace LinqConsoleApp
         /// </summary>
         public void Przyklad3()
         {
-          
+            var result = Emps.Select (emp => emp.Salary ).Max();
+
         }
 
         /// <summary>
@@ -238,6 +239,8 @@ namespace LinqConsoleApp
         /// </summary>
         public void Przyklad4()
         {
+            var max = Emps.Select(emp => emp.Salary).Max();
+            var result = Emps.Where(employee => employee.Salary == max).ToList();
 
         }
 
