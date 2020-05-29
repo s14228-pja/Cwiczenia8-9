@@ -207,6 +207,10 @@ namespace LinqConsoleApp
 
 
             //2. Lambda and Extension methods
+            var result = Emps
+                         .Where(employee => employee.Job == "Backend programmer" )
+                         .ToList();
+
         }
 
         /// <summary>
@@ -214,8 +218,11 @@ namespace LinqConsoleApp
         /// </summary>
         public void Przyklad2()
         {
-            
-
+            var result = Emps
+                .Where(employee => employee.Job == "Frontend programmer" && employee.Salary > 10000)
+                .OrderByDescending(employee => employee.Ename)
+                .ToList();
+               
         }
 
         /// <summary>
