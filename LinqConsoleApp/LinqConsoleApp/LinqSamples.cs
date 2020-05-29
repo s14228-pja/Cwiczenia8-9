@@ -288,7 +288,9 @@ namespace LinqConsoleApp
         /// </summary>
         public void Przyklad9()
         {
-
+            
+            var result = Emps.Where(employee => employee.Job == "Frontend programmer")
+                   .OrderByDescending(employee => employee.HireDate).Take(1);
         }
 
         /// <summary>
