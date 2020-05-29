@@ -279,7 +279,7 @@ namespace LinqConsoleApp
         /// </summary>
         public void Przyklad8()
         {
-
+            var result = Emps.Any(employee => employee.Job == "Backend programmer");
         }
 
         /// <summary>
