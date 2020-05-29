@@ -300,6 +300,12 @@ namespace LinqConsoleApp
         /// </summary>
         public void Przyklad10Button_Click()
         {
+            var result = Emps.Select(employee => new
+            {
+                ename = employee.Ename,
+                job = employee.Job,
+                hireDate = (String)employee.HireDate,
+            }).Union(new { ename = "Brak wartości" , job = (String)null, hireDate = (String)null });
 
         }
 
